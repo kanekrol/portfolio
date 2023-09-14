@@ -22,7 +22,7 @@
                             <tr>
                                 <td>{{$project->title}}</td>
                                 <td>{{$project->description}}</td>
-                                <td>{{$project->image}}</td>
+                                <td><img src="{{ $project->image }}" alt="Project afbeelding" width='300px'></td>
                             </tr>
                             @endforeach
                         </tbody>
