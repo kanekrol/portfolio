@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Project;
 
@@ -23,6 +24,9 @@ Route::get('/dashboard', function () {
     $projects = Project::all();
     return view('dashboard', ['projects' => $projects]);
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::resource('projects', ProjectController::class);
+Route::get('/search',[ProjectController::class, 'show']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
