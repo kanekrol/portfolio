@@ -30,9 +30,14 @@
                                 <td><img src="{{ $project->image }}" alt="Project afbeelding" width='300px'></td>
                                 <td>Test</td>
                                 <td>
-                                    <a class="btn btn-success" href="#">Aanpassen</a>
-                                    <a class="btn btn-danger" href="#">Verwijderen</a>
+                                    <a class="btn btn-success" href="{{ route('projects.edit', $project->id) }}">Aanpassen</a>
+                                    <a class="btn btn-danger" href="{{ route('projects.destroy', $project->id) }}" onclick="event.preventDefault(); document.getElementById('delete-form-{{$project->id}}').submit();">Verwijderen</a>
+                                    <form id="delete-form-{{$project->id}}" action="{{ route('projects.destroy', $project->id) }}" method="POST" style="display: none;">
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
                                 </td>
+                                
                             </tr>
                             @endforeach
                         </tbody>
