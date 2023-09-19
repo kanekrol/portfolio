@@ -1,28 +1,38 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+        <div class="pull-right mb-2">
+            <a class="btn btn-info" href="{{ route('projects.create') }}">Maak project aan</a>
+        </div>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <table>
+                    <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>Project</th>
                                 <th>Titel</th>
                                 <th>Beschrijving</th>
                                 <th>Afbeelding</th>
+                                <th>Categorie</th>
+                                <th>Actie</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($projects as $project)
                             <tr>
+                                <td>{{$project->id}}</td>
                                 <td>{{$project->title}}</td>
                                 <td>{{$project->description}}</td>
                                 <td><img src="{{ $project->image }}" alt="Project afbeelding" width='300px'></td>
+                                <td>Test</td>
+                                <td>
+                                    <a class="btn btn-success" href="#">Aanpassen</a>
+                                    <a class="btn btn-danger" href="#">Verwijderen</a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
