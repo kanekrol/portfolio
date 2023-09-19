@@ -63,21 +63,29 @@
                     </div>
                 </div>
                 
-                
-                
-                
-                
-                
-                
-            
                 <section class="bg-gray-200 py-16">
                     <div class="container mx-auto text-center">
                         <h2 class="text-3xl font-semibold mb-8">Hobby's</h2>
-                        <div class="ml-4 mt-6 text-gray-600 dark:text-gray-400 text-sm">
-                            Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                        <div class="flex flex-wrap justify-evenly items-center">
+                            <div class="w-1/2 p-4 text-center">
+                                <img src="img/voetbal.jpg" alt="Hobby 1" class="mx-auto mb-4" width="300" height="300">
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias incidunt aperiam quasi! Doloribus illo unde voluptas nostrum cumque obcaecati non.
+                                </p>
+                            </div>
+                            <div class="w-1/2 p-4 text-center">
+                                <img src="img/gaming.jpg" alt="Hobby 2" class="mx-auto mb-4" width="300" height="300">
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit beatae in impedit, vitae alias est delectus neque enim repellat tempora.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
+                
+                
+                
+                
             
                 <footer class="bg-gray-300 py-16 text-black py-4">
                     <div class="container mx-auto text-center">
