@@ -29,7 +29,7 @@
                         <li><a href="#" class="hover:underline font-semibold">Over mij</a></li>
                         <li><a href="#" class="hover:underline font-semibold">Hobby's</a></li>
                         @auth
-                        <li><a href="{{ url('/dashboard') }}" class="hover:underline font-semibold">Projecten</a></li>
+                        <li><a href="{{ url('/projects') }}" class="hover:underline font-semibold">Projecten</a></li>
                         @else
                         <li><a class="hover:underline font-semibold" href="{{ route('login') }}"></a></li>
                         @if (Route::has('register'))
@@ -44,7 +44,7 @@
                 <header class="bg-gray-200 py-16 text-black py-16 text-center">
                     <h1 class="text-4xl font-semibold">Welkom op mijn portfolio</h1>
                     <p class="mt-4 text-lg">Dit is mijn portfoliopagina waar je de volgende dingen kunt vinden: mijn projecten, over mij en hobbies.</p>
-                    <a href="{{ url('/dashboard') }}" class="mt-8 inline-block bg-white text-black-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-700 hover:text-white transition duration-300">Mijn Projecten</a>
+                    <a href="{{ url('/projects') }}" class="mt-8 inline-block bg-white text-black-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-700 hover:text-white transition duration-300">Mijn Projecten</a>
                 </header>
             
                 <div class="p-6 border-t border-gray-100 dark:border-gray-700 md:border-t-0 md:border-l">
