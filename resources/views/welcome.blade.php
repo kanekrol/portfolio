@@ -46,15 +46,29 @@
                     <p class="mt-4 text-lg">Dit is mijn portfoliopagina waar je de volgende dingen kunt vinden: mijn projecten, over mij en hobbies.</p>
                     <a href="{{ url('/projects') }}" class="mt-8 inline-block bg-white text-black-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-700 hover:text-white transition duration-300">Mijn Projecten</a>
                 </header>
-            
+                
                 <div class="p-6 border-t border-gray-100 dark:border-gray-700 md:border-t-0 md:border-l">
-                    <div class="container mx-auto text-center">
+                    <div class="container mx-auto text-center mx-26"> <!-- Voeg mx-16 toe om de witruimte aan de zijkanten te vergroten -->
                         <h2 class="text-3xl font-semibold mb-8">Over mij</h2>
-                        <div class="ml-4 mt-6 text-gray-600 dark:text-gray-400 text-sm">
-                            Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                        <div class="flex items-start">
+                            <div class="w-1/4 pr-4"> <!-- Plaatje op 1/4 van de beschikbare ruimte -->
+                                <img src="img/overmij.png" alt="Afbeelding" width="250">
+                            </div>
+                            <div class="w-3/4"> <!-- Tekst op 3/4 van de beschikbare ruimte -->
+                                <p class="text-left text-gray-600 dark:text-gray-400 text-sm">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos esse repellendus ullam dolore, sequi commodi asperiores ipsam eum veritatis temporibus numquam aliquam consequatur laboriosam fugit vero dolorem adipisci rerum veniam! Repudiandae vitae, ex accusantium asperiores placeat earum, ad dolore porro, numquam iure corporis tenetur quibusdam dolorem nam commodi nemo enim? Minus reprehenderit dolorum, quod fugit doloremque facilis officia quas molestiae illum, assumenda quidem necessitatibus expedita voluptas sapiente odit ducimus nulla facere quo corrupti eveniet. Veritatis excepturi quibusdam maiores. Enim amet consequatur excepturi sunt odit corrupti alias explicabo voluptate, nemo quis optio nobis dignissimos pariatur, nostrum quo consequuntur omnis. Mollitia, iusto?
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                
+                
+                
+                
+                
+                
             
                 <section class="bg-gray-200 py-16">
                     <div class="container mx-auto text-center">
