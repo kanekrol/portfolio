@@ -30,7 +30,25 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => ['required', 'max:255'],
+            'image' => ['required', 'image', 'max:2048'], // Voeg validatieregels voor afbeeldingen toe
+            'description' => ['required'],
+        ]);
+        
+        // Upload de afbeelding en krijg het pad naar de opgeslagen afbeelding
+        $imagePath = $request->file('image')->store('project_images', 'public');
+        
+        Project::create([
+            'title' => $request->input('title'),
+            'image' => $imagePath, // Sla het pad naar de afbeelding op in de database
+            'description' => $request->input('description'),
+        ]);
+        
+        return redirect()
+            ->route('dashboard')
+            ->with('success', 'Project created successfully');
+        
     }
 
     /**
