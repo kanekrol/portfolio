@@ -67,7 +67,15 @@
             
                 <footer class="bg-gray-300 py-16 text-black py-4">
                     <div class="container mx-auto text-center">
-                        <p>&copy; 2023 Kane</p>
+                        <div class="mt-4 flex items-center justify-center">
+                            <p>&copy; 2023 Kane - </p>
+                            <a href="https://github.com/kanekrol" class="mx-2">
+                                <img src="img/github.jpg" alt="github" width="25">
+                            </a>
+                            <a href="https://www.linkedin.com/in/kane-krol-58b044251/" class="mx-2">
+                                <img src="img/linkedin.jpg" alt="linkedin" width="25">
+                            </a>
+                        </div>
                     </div>
                 </footer>
             </body>
