@@ -16,17 +16,20 @@ class ProjectsSeeder extends Seeder
         Project::create([
             'title' => 'Project 1',
             'description' => 'Dit is project 1',
-            'image' => 'img/project1.jpg'
+            'image' => 'img/project1.jpg',
+            'category_id' => 1,
         ]);
         Project::create([
             'title' => 'Project 2',
             'description' => 'Dit is project 2',
-            'image' => 'img/project1.jpg'
+            'image' => 'img/project1.jpg',
+            'category_id' => 2,
         ]);
         Project::create([
             'title' => 'Project 3',
             'description' => 'Dit is project 3',
-            'image' => 'img/project1.jpg'
+            'image' => 'img/project1.jpg',
+            'category_id' => 3,
         ]);
     }
 }
