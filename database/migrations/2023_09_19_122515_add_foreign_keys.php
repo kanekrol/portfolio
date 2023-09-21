@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('foreign_keys', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('projects', function (Blueprint $table) {
+            $table->foreignId('category_id')
+            ->references('id')
+            ->on('projects');
         });
     }
 
