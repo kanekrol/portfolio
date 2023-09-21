@@ -28,7 +28,7 @@
                                 <td>{{$project->title}}</td>
                                 <td>{{$project->description}}</td>
                                 <td><img src="{{ $project->image }}" alt="Project afbeelding" width='300px'></td>
-                                <td>Test</td>
+                                <td>{{$project->category->name}}</td>
                                 <td>
                                     <a class="btn btn-success" href="{{ route('projects.edit', $project->id) }}">Aanpassen</a>
                                     <a class="btn btn-danger" href="{{ route('projects.destroy', $project->id) }}" onclick="event.preventDefault(); document.getElementById('delete-form-{{$project->id}}').submit();">Verwijderen</a>
