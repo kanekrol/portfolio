@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -40,7 +41,15 @@
                             <textarea class="form-control" id="description" name="description">{{ old('description', $project->description) }}</textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Opslaan</button>
+                        <select name="category_id" id="1">
+                            @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+
+                        <a class="btn btn-primary">
+                            <input type="submit" value="Project opslaan">
+                        </a>
                     </form>
                 </div>
             </div>
