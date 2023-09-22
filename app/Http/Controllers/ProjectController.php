@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        $categories = Category::all();
+        return view('projects.create', ['categories' => $categories]);
     }
 
     /**
@@ -30,25 +32,14 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => ['required', 'max:255'],
-            'image' => ['required', 'image', 'max:2048'], // Voeg validatieregels voor afbeeldingen toe
-            'description' => ['required'],
-        ]);
-        
-        // Upload de afbeelding en krijg het pad naar de opgeslagen afbeelding
-        $imagePath = $request->file('image')->store('project_images', 'public');
-        
         Project::create([
-            'title' => $request->input('title'),
-            'image' => $imagePath, // Sla het pad naar de afbeelding op in de database
-            'description' => $request->input('description'),
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $request->image,
+            'category_id' => $request->category_id,
         ]);
-        
-        return redirect()
-            ->route('dashboard')
-            ->with('success', 'Project created successfully');
-        
+
+        return redirect()->route('projects.index')->with('succes', 'Project is aangemaakt');        
     }
 
     /**
@@ -64,8 +55,9 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
+        $categories = Category::all();
         $project = Project::findOrFail($id); // Zoek het project op basis van het ID
-        return view('projects.edit', compact('project')); // Laad de bewerkingsweergave en geef het project door
+        return view('projects.edit', compact('project'), ['categories' => $categories]); // Laad de bewerkingsweergave en geef het project door
     }
 
     public function update(Request $request, $id)
@@ -74,6 +66,7 @@ class ProjectController extends Controller
             'title' => ['required', 'max:255'],
             'image' => ['image', 'max:2048'], // Validatieregels voor afbeeldingen bijwerken
             'description' => ['required'],
+            'category_id' => ['required', 'exists:categories,id'],
         ]);
 
         $project = Project::findOrFail($id); // Zoek het project op basis van het ID
