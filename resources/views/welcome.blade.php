@@ -4,7 +4,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight"></h2>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
         <title>Portfolio</title>
 
         <!-- Fonts -->
@@ -26,8 +26,6 @@
                 <div class="container mx-auto flex justify-between items-center">
                     <h1 class="text-2xl font-semibold">Portfolio</h1>
                     <ul class="flex space-x-4">
-                        <li><a href="#" class="hover:underline font-semibold">Over mij</a></li>
-                        <li><a href="#" class="hover:underline font-semibold">Hobby's</a></li>
                         @auth
                         <li><a href="{{ url('/projects') }}" class="hover:underline font-semibold">Projecten</a></li>
                         @else
@@ -49,7 +47,7 @@
                 
                 <div class="p-6 border-t border-gray-100 dark:border-gray-700 md:border-t-0 md:border-l">
                     <div class="container mx-auto text-center mx-26"> <!-- Voeg mx-16 toe om de witruimte aan de zijkanten te vergroten -->
-                        <h2 class="text-3xl font-semibold mb-8">Over mij</h2>
+                        <a href="over-mij" class="text-3xl font-semibold mb-8">Over mij</a>
                         <div class="flex items-start">
                             <div class="w-1/4 pr-4"> <!-- Plaatje op 1/4 van de beschikbare ruimte -->
                                 <img src="img/overmij.png" alt="Afbeelding" width="250">
@@ -65,7 +63,7 @@
                 
                 <section class="bg-gray-200 py-16">
                     <div class="container mx-auto text-center">
-                        <h2 class="text-3xl font-semibold mb-8">Hobby's</h2>
+                        <a href="hobbies" class="text-3xl font-semibold mb-8">Hobby's</a>
                         <div class="flex flex-wrap justify-evenly items-center">
                             <div class="w-1/2 p-4 text-center">
                                 <img src="img/voetbal.jpg" alt="Hobby 1" class="mx-auto mb-4" width="300" height="300">
