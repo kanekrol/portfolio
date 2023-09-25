@@ -26,7 +26,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('projects', ProjectController::class);
-Route::get('/search',[ProjectController::class, 'show']);
+Route::get('/search',[ProjectController::class, 'search']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
