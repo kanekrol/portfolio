@@ -27,13 +27,11 @@
                     <h1 class="text-2xl font-semibold">Portfolio</h1>
                     <ul class="flex space-x-4">
                         @auth
-                        <li><a href="{{ url('/projects') }}" class="hover:underline font-semibold">Projecten</a></li>
+                        <li><a href="{{ url('/dashboard') }}" class="hover:underline font-semibold">Dashboard</a></li>
                         @else
+                        <li><a href="{{ url('/projects') }}" class="hover:underline font-semibold">Projecten</a></li>
                         <li><a class="hover:underline font-semibold" href="{{ route('login') }}"></a></li>
-                        @if (Route::has('register'))
-                           <li><a class="hover:underline font-semibold" href="{{ route('register') }}">Register</a></li>
-                        @endif
-
+                        <li><a class="hover:underline font-semibold" href="{{ route('register') }}">Register</a></li>
                     @endauth
                     </ul>
                 </div>
