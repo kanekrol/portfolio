@@ -8,6 +8,19 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+    public function search(Request $request)
+    {
+        $search = $request->search;    
+        $projects = Project::where(function ($query) use ($search) {
+            $query->where('title', 'like', "%$search%")
+                  ->orWhere('description', 'like', "%$search%");
+        })
+        ->orWhereHas('category', function ($query) use ($search) {
+            $query->where('name', 'like', "%$search%");
+        })
+        ->get();
+        return view('projects.index', compact('projects', 'search'));
+    }
     /**
      * Display a listing of the resource.
      */
