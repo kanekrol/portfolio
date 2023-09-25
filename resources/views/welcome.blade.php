@@ -51,6 +51,7 @@
                                 <img src="img/overmij.png" alt="Afbeelding" width="250">
                             </div>
                             <div class="w-3/4"> <!-- Tekst op 3/4 van de beschikbare ruimte -->
+                                <br>
                                 <p class="text-left text-gray-600 dark:text-gray-400 text-sm">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos esse repellendus ullam dolore, sequi commodi asperiores ipsam eum veritatis temporibus numquam aliquam consequatur laboriosam fugit vero dolorem adipisci rerum veniam! Repudiandae vitae, ex accusantium asperiores placeat earum, ad dolore porro, numquam iure corporis tenetur quibusdam dolorem nam commodi nemo enim? Minus reprehenderit dolorum, quod fugit doloremque facilis officia quas molestiae illum, assumenda quidem necessitatibus expedita voluptas sapiente odit ducimus nulla facere quo corrupti eveniet. Veritatis excepturi quibusdam maiores. Enim amet consequatur excepturi sunt odit corrupti alias explicabo voluptate, nemo quis optio nobis dignissimos pariatur, nostrum quo consequuntur omnis. Mollitia, iusto?
                                 </p>
@@ -61,23 +62,42 @@
                 
                 <section class="bg-gray-200 py-16">
                     <div class="container mx-auto text-center">
-                        <a href="hobbies" class="text-3xl font-semibold mb-8">Hobby's</a>
+                        <a href="hobbies" class="text-3xl font-semibold mb-4">Hobby's</a>
+                        
+                        <!-- Witregel boven de plaatjes toegevoegd -->
+                        <div class="mt-4"></div>
+                        
                         <div class="flex flex-wrap justify-evenly items-center">
-                            <div class="w-1/2 p-4 text-center">
-                                <img src="img/voetbal.jpg" alt="Hobby 1" class="mx-auto mb-4" width="300" height="300">
+                            <!-- Eerste blokje -->
+                            <div class="w-1/3 p-4 text-center rounded-lg bg-white shadow-md mb-4">
+                                <!-- Witregel boven het plaatje toegevoegd -->
+                                <div class="mt-4"></div>
+                                
+                                <!-- Afgeronde hoeken toegevoegd aan het plaatje -->
+                                <img src="img/voetbal.jpg" alt="Hobby 1" class="mx-auto mb-4 rounded" width="300" height="300">
                                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias incidunt aperiam quasi! Doloribus illo unde voluptas nostrum cumque obcaecati non.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis expedita ea nesciunt officia, accusantium laboriosam velit eligendi esse dolorum temporibus labore nemo autem suscipit! Iusto dignissimos animi doloremque illum a perferendis voluptas quo explicabo hic vel magni possimus sed delectus nulla iure, saepe quam voluptatum expedita quaerat rem alias ratione?
                                 </p>
                             </div>
-                            <div class="w-1/2 p-4 text-center">
-                                <img src="img/gaming.jpg" alt="Hobby 2" class="mx-auto mb-4" width="300" height="300">
+                            
+                            <!-- Tweede blokje -->
+                            <div class="w-1/3 p-4 text-center rounded-lg bg-white shadow-md mb-4">
+                                <!-- Witregel boven het plaatje toegevoegd -->
+                                <div class="mt-4"></div>
+                                
+                                <!-- Afgeronde hoeken toegevoegd aan het plaatje -->
+                                <img src="img/gaming.jpg" alt="Hobby 2" class="mx-auto mb-4 rounded" width="300" height="300">
                                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit beatae in impedit, vitae alias est delectus neque enim repellat tempora.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis expedita ea nesciunt officia, accusantium laboriosam velit eligendi esse dolorum temporibus labore nemo autem suscipit! Iusto dignissimos animi doloremque illum a perferendis voluptas quo explicabo hic vel magni possimus sed delectus nulla iure, saepe quam voluptatum expedita quaerat rem alias ratione?
                                 </p>
                             </div>
                         </div>
                     </div>
                 </section>
+                
+                
+                
+                
                 
                 
                 
