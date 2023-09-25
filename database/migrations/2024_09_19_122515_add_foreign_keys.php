@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('projects', function (Blueprint $table) {
             $table->foreignId('category_id')
             ->references('id')
-            ->on('projects');
+            ->on('categories');
         });
     }
 
